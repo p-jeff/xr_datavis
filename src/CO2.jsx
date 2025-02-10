@@ -4,6 +4,7 @@ import {
   RoundedBox,
   Billboard,
   Text,
+  useGLTF 
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { XR, XROrigin, createXRStore, useXR } from "@react-three/xr";
@@ -12,6 +13,11 @@ import TextWithBackground from "./assets/TextWithBackground";
 import { CameraLogger } from "./CameraLogger";
 
 const store = createXRStore();
+
+const Man = (props) => {
+  const { scene } = useGLTF("man.glb");
+  return <primitive object={scene} {...props} />;
+};
 
 const XRContent = () => {
   const { session } = useXR();
@@ -86,6 +92,7 @@ const XRContent = () => {
           <Text rotation={[0, Math.PI, 0]} position={[0, 4.5, 5]} scale={0.5}>
             Grid Square is 0.5m x 0.5m.
           </Text>
+          <Man position={[0, 0, 0]} rotation={[0, Math.PI,0]} />
         </>
       )}
 
