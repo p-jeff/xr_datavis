@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fallback</title>
+    <script>
+      // Redirect any 404 to the base path using JavaScript
+      const redirectTo = window.location.origin + "/xr_datavis/";
+      window.location.href = redirectTo + "#!" + window.location.pathname;
+    </script>
+  </head>
+  <body></body>
+</html>
