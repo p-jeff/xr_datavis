@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import CO2 from './CO2';
 import Burgers from './Burgers';
 
@@ -16,14 +16,13 @@ function Home() {
 
 function App() {
   return (
-    <Router basename="/xr_datavis">
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<div>Home Page</div>} />
         <Route path="/CO2" element={<CO2 />} />
         <Route path="/Burgers" element={<Burgers />} />
       </Routes>
     </Router>
   );
 }
-
 export default App;
