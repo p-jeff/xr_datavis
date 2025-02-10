@@ -7,6 +7,6 @@ import Burgers from './Burgers.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Burgers />
+    <CO2 />
   </StrictMode>,
 )
