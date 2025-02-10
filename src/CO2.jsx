@@ -120,7 +120,7 @@ const XRContent = () => {
 const CO2 = () => {
   return (
     <>
-      <button onClick={() => store.enterAR()}>Enter AR</button>
+      <button className="enter-vr" onClick={() => store.enterAR()}>Enter XR</button>
       <Canvas
         camera={{
           position: [0, 2.25, -7], // x, y, z coordinates

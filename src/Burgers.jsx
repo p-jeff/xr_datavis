@@ -143,7 +143,7 @@ const XRContent = () => {
 const Burgers = () => {
   return (
     <>
-      <button onClick={() => store.enterAR()}>Enter AR</button>
+      <button className="enter-vr" onClick={() => store.enterAR()}>Enter XR</button>
       <Canvas
         shadows
         camera={{
